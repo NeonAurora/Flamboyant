@@ -85,10 +85,12 @@ export const themeSettings = (mode) => {
               ...tokensDark.text,
               main: tokensDark.text[500],
               light: tokensDark.text[300],
+              dark: tokensDark.text[900],
             },
             accent: {
               ...tokensDark.accent,
-              main: tokensDark.accent[300],
+              main: tokensDark.accent[500],
+              light: tokensDark.accent[300],
               dark: tokensDark.accent[901],
             },
             background: {

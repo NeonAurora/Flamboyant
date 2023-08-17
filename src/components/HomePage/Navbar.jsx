@@ -26,7 +26,7 @@ function Navbar() {
           variant="h1"
           component="div"
           color={theme.palette.text.main}
-          sx={{ fontWeight: "bold" }}
+          sx={{ fontWeight: "bold", margin: "0rem 0rem 0rem 10rem" }}
         >
           Glovision
         </Typography>
