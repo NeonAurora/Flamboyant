@@ -12,17 +12,6 @@ export const tokensDark = {
     900: "#083333",
   },
   primary: {
-    100: "#d8d3f6",
-    200: "#b1a8ed",
-    300: "#8a7ce5",
-    400: "#6351dc",
-    500: "#3c25d3",
-    600: "#301ea9",
-    700: "#24167f",
-    800: "#02042c",
-    900: "#04001e", //manually adjusted
-  },
-  secondary: {
     100: "#d7e0ef",
     200: "#afc2e0",
     300: "#86a3d0",
@@ -32,6 +21,17 @@ export const tokensDark = {
     700: "#203d6a",
     800: "#162947",
     900: "#0b2856", //manually adjusted
+  },
+  secondary: {
+    100: "#d8d3f6",
+    200: "#b1a8ed",
+    300: "#8a7ce5",
+    400: "#6351dc",
+    500: "#3c25d3",
+    600: "#301ea9",
+    700: "#24167f",
+    800: "#02042c",
+    900: "#04001e", //manually adjusted
   },
   accent: {
     100: "#f6d2d2",
@@ -43,6 +43,7 @@ export const tokensDark = {
     700: "#7d1313",
     800: "#540d0d",
     900: "#2a0606",
+    901: "#FFFFFF1A" //manually adjusted
   },
 };
 
@@ -73,41 +74,53 @@ export const themeSettings = (mode) => {
             // palette values for dark mode
             primary: {
               ...tokensDark.primary,
-              main: tokensDark.primary[400],
+              main: tokensDark.primary[900],
               light: tokensDark.primary[400],
             },
             secondary: {
               ...tokensDark.secondary,
-              main: tokensDark.secondary[300],
+              main: tokensDark.secondary[900],
             },
-            neutral: {
-              ...tokensDark.grey,
-              main: tokensDark.grey[500],
+            text: {
+              ...tokensDark.text,
+              main: tokensDark.text[500],
+              light: tokensDark.text[300],
+            },
+            accent: {
+              ...tokensDark.accent,
+              main: tokensDark.accent[300],
+              dark: tokensDark.accent[901],
             },
             background: {
-              default: tokensDark.primary[600],
-              alt: tokensDark.primary[500],
+              default: tokensDark.secondary[900],
+              alt: tokensDark.secondary[800],
             },
           }
         : {
             // palette values for light mode
             primary: {
               ...tokensLight.primary,
-              main: tokensDark.grey[50],
-              light: tokensDark.grey[100],
+              main: tokensDark.primary[300],
+              light: tokensDark.primary[100],
             },
             secondary: {
               ...tokensLight.secondary,
               main: tokensDark.secondary[600],
               light: tokensDark.secondary[700],
             },
-            neutral: {
-              ...tokensLight.grey,
-              main: tokensDark.grey[500],
+            text: {
+              ...tokensDark.text,
+              main: tokensDark.text[400],
+              light: tokensDark.text[600],
+            },
+            accent: {
+              ...tokensLight.primary,
+              main: tokensDark.primary[500],
+              dark: tokensDark.accent[100],
             },
             background: {
-              default: tokensDark.grey[0],
-              alt: tokensDark.grey[50],
+              default: tokensDark.primary[100],
+              alt: tokensDark.primary[300],
             },
           }),
     },
@@ -140,5 +153,4 @@ export const themeSettings = (mode) => {
       },
     },
   };
-  
 };
