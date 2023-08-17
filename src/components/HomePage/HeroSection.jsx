@@ -107,27 +107,45 @@ function HeroSection() {
         >
           <Button
             variant="outlined"
+            onClick={() => window.open('https://google.com', '_blank')}
             sx={{
-              width: "130px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: "14px",
+              width: "200px",
               height: "40px",
               color: "white",
               fontFamily: "'Lato', sans-serif",
-              fontWeight: 500,
-              background:
-                "radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%)",
+              fontWeight: "500",
+              background: "rgba(255, 255, 255, 0.1)",
               borderRadius: "5px",
               position: "relative",
               cursor: "pointer",
               border: "none",
+              overflow: "hidden",
               outline: "none",
               boxShadow:
                 "inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1)",
-              "&:hover": {
-                background: "transparent",
-                color: "#76aef1",
-                boxShadow: "none",
+              backdropFilter: "blur(5px)",
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+                zIndex: -1,
+                background: `linear-gradient(to right, ${theme.palette.accent.light}, ${theme.palette.text.dark})`,
+                borderRadius: "inherit",
+                margin: "-2px",
               },
-              // Adaptation of the :before and :after pseudo elements
+              "&:hover": {
+                color: theme.palette.text.dark,
+                background: `linear-gradient(to right, ${theme.palette.accent.light}, ${theme.palette.text.light})`,
+                boxShadow: "none",
+                backdropFilter: "none",
+              },
               "&::before, &::after": {
                 position: "absolute",
                 content: '""',
@@ -135,7 +153,7 @@ function HeroSection() {
                 width: "1px",
                 boxShadow:
                   "-1px -1px 20px 0px rgba(255,255,255,1), -4px -4px 5px 0px rgba(255,255,255,1), 7px 7px 20px 0px rgba(0,0,0,.4), 4px 4px 5px 0px rgba(0,0,0,.3)",
-                zIndex: -1, // to keep the shadow behind the button text
+                zIndex: -1,
               },
               "&::before": {
                 right: 0,
@@ -150,10 +168,11 @@ function HeroSection() {
               "&:hover::before, &:hover::after": {
                 height: "100%",
               },
-              // Adaptation of the span :before and :after pseudo elements
               "& span": {
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 position: "relative",
-                display: "block",
                 width: "100%",
                 height: "100%",
                 "&::before, &::after": {
