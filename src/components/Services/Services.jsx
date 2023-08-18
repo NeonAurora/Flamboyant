@@ -1,9 +1,9 @@
 import React from "react";
-import SoftwareDev from "./SoftwareDev";
+import SoftwareDev from "components/Services/SoftwareDev";
 import { Box } from "@mui/material";
-import AndroidDev from "./AndroidDev";
-import CloudEngineering from "./CloudEngineering";
-import UIDesigning from "./UIDesigning";
+import AndroidDev from "components/Services/AndroidDev";
+import CloudEngineering from "components/Services/CloudEngineering";
+import UIDesigning from "components/Services/UIDesigning";
 
 const Services = () => {
   return (
