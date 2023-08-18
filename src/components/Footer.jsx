@@ -1,7 +1,4 @@
 import React from "react";
-// import { Grid, Typography, Link, Box } from '@material-ui/core';
-// import { LinkedIn, Facebook, Instagram } from '@material-ui/icons';
-
 import { Grid, Typography, Link, Box } from "@mui/material";
 import { LinkedIn, Facebook, Instagram } from "@mui/icons-material";
 import { useTheme } from "@mui/material";
@@ -12,7 +9,10 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: theme.palette.primary[700],
+        background:
+          "linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1))", // gradient from top-left to bottom-right
+        // border: "1px solid",
+        borderColor: "linear-gradient(to bottom right, teal, dark)", // gradient border
         color: "white",
         padding: "2em",
         height: "80vh",
