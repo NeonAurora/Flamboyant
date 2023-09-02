@@ -17,7 +17,7 @@ function HeroSection() {
   return (
     <Box
       sx={{
-        height: "100vh",
+        height: "90vh",
         margin: "0% 0% 0% 0%",
         backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
@@ -107,7 +107,7 @@ function HeroSection() {
         >
           <Button
             variant="outlined"
-            onClick={() => window.open('https://google.com', '_blank')}
+            onClick={() => window.open("https://google.com", "_blank")}
             sx={{
               display: "flex",
               alignItems: "center",
@@ -117,8 +117,8 @@ function HeroSection() {
               height: "40px",
               color: "white",
               fontFamily: "'Lato', sans-serif",
-              fontWeight: "500",
-              background: "rgba(255, 255, 255, 0.1)",
+              fontWeight: "700",
+              background: `linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.1) 100%)`,
               borderRadius: "5px",
               position: "relative",
               cursor: "pointer",
@@ -136,13 +136,13 @@ function HeroSection() {
                 bottom: 0,
                 left: 0,
                 zIndex: -1,
-                background: `linear-gradient(to right, ${theme.palette.accent.light}, ${theme.palette.text.dark})`,
+                background: `linear-gradient(to right, ${theme.palette.accent[300]}, ${theme.palette.text.dark})`,
                 borderRadius: "inherit",
                 margin: "-2px",
               },
               "&:hover": {
                 color: theme.palette.text.dark,
-                background: `linear-gradient(to right, ${theme.palette.accent.light}, ${theme.palette.text.light})`,
+                background: `linear-gradient(to bottom right, ${theme.palette.text[600]}, ${theme.palette.accent.dark})`,
                 boxShadow: "none",
                 backdropFilter: "none",
               },
