@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Box, Typography, useTheme } from "@mui/material";
+import { ArrowForwardIos } from "@mui/icons-material";
 
 const ParentBox = () => {
   const theme = useTheme();
@@ -68,9 +69,16 @@ const ParentBox = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              marginTop: "10%",
             }}
           >
-            <Typography variant="h4">Some explanation text here.</Typography>
+            <Box sx={{ maxWidth: "40%" }}>
+              <Typography variant="h4">
+                Guiding you through every stage of the software development
+                lifecycle, from innovative design ideas to robust testing
+                strategies and seamless deployment plans.
+              </Typography>
+            </Box>
           </Box>
           <Box
             sx={{
@@ -171,44 +179,193 @@ const ParentBox = () => {
               textAlign: "center",
             }}
           >
+            {/* First Header Box */}
             <Box
               sx={{
                 height: "100vh",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
+                gap: 4, // Adding space between the explanation and points
+                marginTop: "15%",
               }}
             >
-              <Typography variant="h4">
-                Our design team excels in innovation and creativity. Together,
-                we bring your ideas to life.
-              </Typography>
+              {/* Wrap the explanation in another box */}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center", // Horizontally center-align the text
+                  maxWidth: "40%", // Limiting the width
+                }}
+              >
+                <Typography variant="h4">
+                  Our design team excels in innovation and creativity. Together,
+                  we bring your ideas to life, making sure every design is
+                  unique and impactful.
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "left",
+                  gap: 2, // Adding space between points
+                }}
+              >
+                {[
+                  "Innovative approach to design",
+                  "User-centered experience",
+                  "Attention to detail",
+                ].map((point, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1, // Adding space between icon and text
+                    }}
+                  >
+                    <ArrowForwardIos
+                      sx={{
+                        width: "1.5em", // Adjust icon width
+                        height: "1.5em", // Adjust icon height
+                      }}
+                    />{" "}
+                    {/* Right-facing arrow icon */}
+                    <Typography variant="body1" sx={{ fontSize: "3em" }}>
+                      {point}
+                    </Typography>{" "}
+                    {/* Larger font size */}
+                  </Box>
+                ))}
+              </Box>
             </Box>
+
+            {/* Second Header Box */}
             <Box
               sx={{
                 height: "100vh",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
+                gap: 4, // Adding space between the explanation and points
+                marginTop: "15%",
               }}
             >
-              <Typography variant="h4">
-                Our testing methodologies ensure quality and reliability. We
-                strive for perfection.
-              </Typography>
+              {/* Wrap the explanation in another box */}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center", // Horizontally center-align the text
+                  maxWidth: "40%", // Limiting the width
+                }}
+              >
+                <Typography variant="h4">
+                  Our testing strategy focuses on rigor and comprehensiveness.
+                  We ensure that every line of code meets the highest quality
+                  standards, minimizing risks and enhancing performance.
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "left",
+                  gap: 2, // Adding space between points
+                }}
+              >
+                {[
+                  "Comprehensive test coverage",
+                  "Risk mitigation through testing",
+                  "Performance optimization",
+                ].map((point, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1, // Adding space between icon and text
+                    }}
+                  >
+                    <ArrowForwardIos
+                      sx={{
+                        width: "1.5em", // Adjust icon width
+                        height: "1.5em", // Adjust icon height
+                      }}
+                    />{" "}
+                    {/* Right-facing arrow icon */}
+                    <Typography variant="body1" sx={{ fontSize: "3em" }}>
+                      {point}
+                    </Typography>{" "}
+                    {/* Larger font size */}
+                  </Box>
+                ))}
+              </Box>
             </Box>
+
+            {/* Third Header Box */}
             <Box
               sx={{
                 height: "100vh",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
+                gap: 4, // Adding space between the explanation and points
+                marginTop: "15%",
               }}
             >
-              <Typography variant="h4">
-                We ensure a smooth deployment so that your application runs
-                seamlessly. Excellence is what we aim for.
-              </Typography>
+              {/* Wrap the explanation in another box */}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center", // Horizontally center-align the text
+                  maxWidth: "40%", // Limiting the width
+                }}
+              >
+                <Typography variant="h4">
+                  Our deployment plan is meticulously designed for scalability
+                  and resilience. With our approach, your application is
+                  guaranteed to run seamlessly across multiple environments.
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "left",
+                  gap: 2, // Adding space between points
+                }}
+              >
+                {[
+                  "Scalability as a priority",
+                  "Multi-environment support",
+                  "Zero-downtime deployments",
+                ].map((point, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1, // Adding space between icon and text
+                    }}
+                  >
+                    <ArrowForwardIos
+                      sx={{
+                        width: "1.5em", // Adjust icon width
+                        height: "1.5em", // Adjust icon height
+                      }}
+                    />{" "}
+                    {/* Right-facing arrow icon */}
+                    <Typography variant="body1" sx={{ fontSize: "3em" }}>
+                      {point}
+                    </Typography>{" "}
+                    {/* Larger font size */}
+                  </Box>
+                ))}
+              </Box>
             </Box>
           </Box>
         </Box>
